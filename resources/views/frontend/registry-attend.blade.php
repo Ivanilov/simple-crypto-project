@@ -16,65 +16,6 @@
                             <span class="d-block text-muted">Пожалуйста, заполните все поля</span>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group form-group-feedback form-group-feedback-right">
-                                    {{ html()->text('first_name')->class('form-control')->placeholder('Имя')->required() }}
-                                    <div class="form-control-feedback">
-                                        <i class="icon-user-check text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-group-feedback form-group-feedback-right">
-                                    {{ html()->text('last_name')->class('form-control')->placeholder('Фамилия') }}
-                                    <div class="form-control-feedback">
-                                        <i class="icon-user-check text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-group-feedback form-group-feedback-right">
-                                    {{ html()->text('surname')->class('form-control')->placeholder('Отчество') }}
-                                    <div class="form-control-feedback">
-                                        <i class="icon-user-check text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-group-feedback form-group-feedback-right">
-                                    {{ html()->text('company')->class('form-control')->placeholder('Компания') }}
-                                    <div class="form-control-feedback">
-                                        <i class="icon-user-lock text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group form-group-feedback form-group-feedback-right">
-                                    {{ Form::tel('phone', null, [
-                                          'id'   => 'phone',
-                                          'class' => 'form-control',
-                                          'placeholder' => 'Телефон'
-                                          ]
-                                          ) }}
-                                    <div class="form-control-feedback">
-                                        <i class="icon-phone text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-group-feedback form-group-feedback-right">
-                            {{ html()->email('email')->class('form-control')->placeholder('Email')->required() }}
-                            <div class="form-control-feedback">
-                                <i class="icon-mention text-muted"></i>
-                            </div>
-                        </div>
-
                         <div action="{!! route('frontend.registry-attend.dropzone-upload') !!}" class="dropzone dz-clickable" id="dropzone-files">
                             {!! Form::hidden('files_order', '[]'); !!}
                             <div class="dz-default dz-message"><span>Перетащите файлы для загрузки <span>или НАЖМИТЕ на иконку</span></span></div>

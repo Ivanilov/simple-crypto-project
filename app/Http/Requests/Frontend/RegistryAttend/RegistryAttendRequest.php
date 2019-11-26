@@ -27,8 +27,7 @@ class RegistryAttendRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required',
-            'email' => 'required | email',
+
         ];
     }
 }

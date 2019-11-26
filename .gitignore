@@ -10,6 +10,7 @@
 /public/media/*
 /public/files/*
 /storage/*.key
+/storage/*.zip
 /vendor
 /.idea
 /.vagrant

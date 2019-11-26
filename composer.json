@@ -12,6 +12,7 @@
         "codedungeon/phpunit-result-printer": "0.4.4",
         "creativeorange/gravatar": "~1.0",
         "davejamesmiller/laravel-breadcrumbs": "5.2.*",
+        "defuse/php-encryption": "^2.2",
         "fideloper/proxy": "~4.0",
         "hieu-le/active": "^3.5",
         "laravel/framework": "5.8.*",
