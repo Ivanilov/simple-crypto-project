@@ -1,0 +1,152 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Labels Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used in labels throughout the system.
+    | Regardless where it is placed, a label can be listed here so it is easily
+    | found in a intuitive way.
+    |
+    */
+
+    'backend'   => [
+        'access'        => [
+            'roles' => [
+                'create'            => 'Create Role',
+                'create_role_form'  => 'Create role',
+                'edit'              => 'Edit Role',
+                'management'        => 'Role Management',
+                'table'             => [
+                    'number_of_users'   => 'Number of Users',
+                    'permissions'       => 'Permissions',
+                    'role'              => 'Role',
+                    'sort'              => 'Sort',
+                    'total'             => 'role total|roles total',
+                ],
+            ],
+            'users' => [
+                'access_permissions'    => 'Access permissions',
+                'active'                => 'Active Users',
+                'all_permissions'       => 'All Permissions',
+                'basic_information'     => 'Basic information',
+                'change_password'       => 'Change Password',
+                'change_password_for'   => 'Change Password for :user',
+                'create'                => 'Create User',
+                'deactivated'           => 'Deactivated Users',
+                'deleted'               => 'Deleted Users',
+                'edit'                  => 'Edit User',
+                'management'            => 'User Management',
+                'no_permissions'        => 'No Permissions',
+                'no_roles'              => 'No Roles to set.',
+                'other_permissions'     => 'Other permissions',
+                'permissions'           => 'Permissions',
+                'roles'                 => 'Roles',
+                'table'                 => [
+                    'confirmed'         => 'Confirmed',
+                    'created'           => 'Created',
+                    'email'             => 'E-mail',
+                    'first_name'        => 'First Name',
+                    'id'                => 'ID',
+                    'last_name'         => 'Last Name',
+                    'last_updated'      => 'Last Updated',
+                    'name'              => 'Name',
+                    'no_deactivated'    => 'No Deactivated Users',
+                    'no_deleted'        => 'No Deleted Users',
+                    'other_permissions' => 'Other Permissions',
+                    'permissions'       => 'Permissions',
+                    'roles'             => 'Roles',
+                    'social'            => 'Social',
+                    'total'             => 'user total|users total',
+                ],
+                'tabs'                  => [
+                    'content'   => [
+                        'overview'  => [
+                            'access'        => 'Access',
+                            'avatar'        => 'Avatar',
+                            'confirmed'     => 'Confirmed',
+                            'created_at'    => 'Created At',
+                            'deleted_at'    => 'Deleted At',
+                            'email'         => 'E-mail',
+                            'first_name'    => 'First Name',
+                            'last_name'     => 'Last Name',
+                            'last_updated'  => 'Last Updated',
+                            'main'          => 'Main',
+                            'name'          => 'Name',
+                            'permissions'   => 'Permissions',
+                            'roles'         => 'Roles',
+                            'status'        => 'Status',
+                        ],
+                    ],
+                    'titles'    => [
+                        'history'   => 'History',
+                        'overview'  => 'Overview',
+                    ],
+                ],
+                'view'                  => 'View User',
+            ],
+        ],
+        'breadcrumbs'   => [
+            'home'  => 'Home',
+        ],
+    ],
+    'frontend'  => [
+        'auth'      => [
+            'login_box_title'       => 'Login',
+            'login_button'          => 'Login',
+            'login_with'            => 'Login with :social_media',
+            'register_box_title'    => 'Register',
+            'register_button'       => 'Register',
+            'remember_me'           => 'Remember Me',
+        ],
+        'contact'   => [
+            'box_title' => 'Contact Us',
+            'button'    => 'Send Information',
+        ],
+        'passwords' => [
+            'expired_password_box_title'        => 'Your password has expired.',
+            'forgot_password'                   => 'Forgot Your Password?',
+            'reset_password_box_title'          => 'Reset Password',
+            'reset_password_button'             => 'Reset Password',
+            'send_password_reset_link_button'   => 'Send Password Reset Link',
+            'update_password_button'            => 'Update Password',
+        ],
+        'user'      => [
+            'passwords' => [
+                'change'    => 'Change Password',
+            ],
+            'profile'   => [
+                'avatar'                => 'Avatar',
+                'created_at'            => 'Created At',
+                'edit_information'      => 'Edit Information',
+                'email'                 => 'E-mail',
+                'first_name'            => 'First Name',
+                'last_name'             => 'Last Name',
+                'last_updated'          => 'Last Updated',
+                'name'                  => 'Name',
+                'update_information'    => 'Update Information',
+            ],
+        ],
+    ],
+    'general'   => [
+        'actions'           => 'Actions',
+        'active'            => 'Active',
+        'all'               => 'All',
+        'buttons'           => [
+            'save'      => 'Save',
+            'update'    => 'Update',
+        ],
+        'copyright'         => 'Copyright',
+        'custom'            => 'Custom',
+        'hide'              => 'Hide',
+        'inactive'          => 'Inactive',
+        'no'                => 'No',
+        'none'              => 'None',
+        'show'              => 'Show',
+        'toggle_navigation' => 'Toggle Navigation',
+        'yes'               => 'Yes',
+    ],
+];

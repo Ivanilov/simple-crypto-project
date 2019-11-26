@@ -1,0 +1,2 @@
+<a href="{{ route('admin.auth.role.index') }}" class="btn btn-default btn-raised btn-xs btn-labeled heading-btn mr-3">{{ __('labels.backend.access.roles.management') }} <b><i class="icon-list"></i></b></a>
+<a href="{{ route('admin.auth.role.create') }}" class="btn btn-labeled btn-xs bg-success btn-raised heading-btn pull-right">{{ __('labels.backend.access.roles.create') }} <b><i class="icon-plus3"></i></b></a>

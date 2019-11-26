@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "(npm run frontend && npm run backend)",
+    "prod": "(npm run frontend_prod && npm run backend_prod)",
+    "backend": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --env.part=backend --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "frontend": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --env.part=frontend --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "backend_prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --env.part=backend --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "frontend_prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --env.part=frontend --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^0.17",
+    "bootstrap": "^4.0.0-beta.2",
+    "cross-env": "^5.1",
+    "expose-loader": "^0.7.4",
+    "font-awesome": "^4.7.0",
+    "imports-loader": "^0.7.1",
+    "inputmask": "^3.3.7",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.0.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "lodash": "^4.17.4",
+    "pace": "github:HubSpot/pace#v1.0.2",
+    "popper.js": "^1.12.4",
+    "select2": "^4.0.3",
+    "simple-line-icons": "^2.4.1",
+    "sweetalert2": "^7.7.0",
+    "tether": "^1.4.0",
+    "vue": "^2.5.7"
+  },
+  "dependencies": {
+    "bootstrap-sass-loader": "^1.0.10"
+  }
+}

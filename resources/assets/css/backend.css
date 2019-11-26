@@ -1,0 +1,22 @@
+table .btn-group-sm > .btn, table .btn-sm,
+table .btn-group-xs > .btn, table .btn-xs {
+    padding: 3px 8px;
+}
+
+.table-responsive{
+    overflow-y:visible;
+    overflow-x:visible;
+}
+
+table .btn-group {
+    display: flex;
+}
+
+table .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu {
+    z-index: 1001;
+}
