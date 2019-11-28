@@ -14,7 +14,7 @@ class RegistryAttendDropzoneController extends Controller
 {
     public function dropzoneUpload(Request $request)
     {
-        if ($path = (new TemporaryFile($request->file('file')))->upload())
+        if ($path = (new TemporaryFile($request->file('file')))->upload($request->file('file')))
             return response()->json(['path' => $path], 200);
 
         return response()->json(['message' => 'Server error while uploading'], 500);

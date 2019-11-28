@@ -27,11 +27,14 @@ class TemporaryFile
         if(!$this->file)
             return false;
 
-        $upload_filename = $this->makeUniqueTemporaryFilename(slug_filename($this->file->getClientOriginalName()));
+        $upload_filename = $this->makeUniqueTemporaryFilename($file->getClientOriginalName());
         $upload_path = $this->makeTemporaryPath($upload_filename);
 
-        if(File::put($upload_path,$this->file))
-            return $upload_path;
+        if($file->storeAs($this->folder,$upload_filename))
+        {
+            return storage_path('app/').$upload_path;
+        }
+
 
         return false;
     }

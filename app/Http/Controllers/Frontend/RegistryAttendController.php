@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\RegistryAttend\RegistryAttendRequest;
-use App\Mail\Frontend\RegistryAttend\RegistryAttend;
-use Illuminate\Support\Facades\Mail;
 use ZipArchive;
+use Defuse\Crypto\File;
+use Defuse\Crypto\Key;
 
 /**
  * Class ContactController.
@@ -28,6 +28,12 @@ class RegistryAttendController extends Controller
      */
     public function send(RegistryAttendRequest $request)
     {
+        $files = glob(storage_path().'/archive/*'); // get all file names
+        foreach($files as $file){ // iterate files
+        if(is_file($file))
+            unlink($file); // delete file
+        }
+
         $attend = \App\Models\RegistryAttend::create([
             'first_name' => 'Ant',
             'email' => 'ok'
@@ -36,15 +42,17 @@ class RegistryAttendController extends Controller
         $attend->save();
         $files = $attend->files;
         $zip = new ZipArchive;
-        $zip->open(storage_path().'/hello.zip', ZipArchive::CREATE);
+        $zip->open(storage_path().'/archive/'.'test.zip', ZipArchive::CREATE);
         foreach ($files as $file)
         {
-            
             $zip->addFile($file->getPath(), $file->file_name);
         }
         $zip->close();
-        
 
-        return redirect()->back()->withFlashSuccess('Заявка на регистрацию была отправлена успешно!');
+        $key = Key::createNewRandomKey();
+        File::encryptFile(storage_path().'/archive/'.'test.zip',storage_path().'/archive/encrypt/'.'test.zip',$key);
+        File::decryptFile(storage_path().'/archive/encrypt/'.'test.zip',storage_path().'/archive/decrypt/'.'test.zip',$key);
+
+        return redirect()->back()->withFlashSuccess('Кодирование прошло успешно!');
     }
 }
