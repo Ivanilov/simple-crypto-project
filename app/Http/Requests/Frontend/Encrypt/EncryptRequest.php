@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Requests\Frontend\RegistryAttend;
+namespace App\Http\Requests\Frontend\Encrypt;
 
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class SendContactRequest.
  */
-class RegistryAttendRequest extends FormRequest
+class EncryptRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class RegistryAttendRequest extends FormRequest
     public function rules()
     {
         return [
-
+            'pass' => 'required'
         ];
     }
 }

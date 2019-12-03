@@ -1,21 +1,26 @@
 @extends('frontend.layouts.app')
 
-@section('title', app_name() . ' | Регистрация партнера')
+@section('title', app_name() . ' | Шифрование')
 
 @section('content')
     <div class="content d-flex justify-content-center align-items-center">
         <!-- Registration form -->
-    {{ html()->form('POST', route('frontend.registry-attend.send'))->class('flex-fill')->acceptsFiles()->open() }}
+    {{ html()->form('POST', route('frontend.encryption.encrypt'))->class('flex-fill')->acceptsFiles()->open() }}
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="card mb-0">
                     <div class="card-body">
                         <div class="text-center mb-3">
                             <i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
-                            <h5 class="mb-0">Регистрация партнёра</h5>
-                            <span class="d-block text-muted">Пожалуйста, заполните все поля</span>
+                            <h5 class="mb-0">Зашифровать архив файлов</h5>
+                            <span class="d-block text-muted">Пожалуйста, введите ключ шифрования</span>
                         </div>
-
+                        <div class="form-group form-group-feedback form-group-feedback-right">
+                            <input class="form-control" type="text" name="pass" id="pass" placeholder="key" required="">
+                            <div class="form-control-feedback">
+                                <i class="icon-mention text-muted"></i>
+                            </div>
+                        </div>
                         <div action="{!! route('frontend.registry-attend.dropzone-upload') !!}" class="dropzone dz-clickable" id="dropzone-files">
                             {!! Form::hidden('files_order', '[]'); !!}
                             <div class="dz-default dz-message"><span>Перетащите файлы для загрузки <span>или НАЖМИТЕ на иконку</span></span></div>
@@ -24,11 +29,17 @@
                             <span class="d-block text-muted">Размер файла не может превышать 2MB.<br> Разрешается загружать до 5 файлов.<br> Разрешенные форматы файлов: .doc/.docx, .xls/.xlsx, .zip/.rar, .jpg/.jpeg/.png .</span>
                         </div>
                         <button type="submit"  class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b>Отправить</button>
+                        {{ html()->form()->close() }}
+                        @if(session()->get('link'))
+                        {{ html()->form('POST', route('frontend.encryption.download'))->class('flex-fill')->open() }}
+                        <button type="submit" target="_blank"  class="btn bg-success btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b>Скачать</button>
+                        {{ html()->form()->close() }}
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
-    {{ html()->form()->close() }}
+    
 
 </div>
 @endsection
